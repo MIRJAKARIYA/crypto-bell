@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Coin = ({coin}) => {
-    const {id, image, symbol} = coin;
+    const {id, image, symbol, name} = coin;
     const navigate = useNavigate();
     const getInformation = () =>{
         const url = `/coininfo/${id}`;
@@ -14,7 +14,7 @@ const Coin = ({coin}) => {
                 <img src={image} className='w-[100px]' alt="" />
             </div>
             <div>
-                <p>{id}</p>
+                <p>{name}</p>
                 <small>{symbol}</small>
             </div>
         </div>
