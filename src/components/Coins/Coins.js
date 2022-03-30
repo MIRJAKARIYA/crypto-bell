@@ -9,9 +9,9 @@ const Coins = () => {
         .then(data => setCoins(data));
     }, []);
     return (
-        <div>
+        <div className='w-11/12 gap-8 grid sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 mt-10 mx-auto'>
             {
-                coins.map(coin => <Coin coin={coin}></Coin>)
+                coins.map(coin => <Coin key={coin.id} coin={coin}></Coin>)
             }
         </div>
     );
